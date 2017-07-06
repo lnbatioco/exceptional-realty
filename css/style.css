@@ -10,11 +10,7 @@ p {
 }
 
 figcaption {
-  /*font-weight: normal;
-  font-size: 0.75em;
-  line-height: 1.5em;
-  font-family: 'Elsie Swash Caps', cursive; because of spaces, use quotes*/
-  font: normal 0.75em/1.5em 'Elsie Swash Caps', cursive;
+  font: normal 0.75em/1.5em 'Elsie Swash Caps', cursive; /* font-weight, font-size/line-height, font-family */
   color: #777;
   text-align: right;
 }
@@ -28,7 +24,7 @@ figcaption {
 
 /* ID selector */
 #logo{
-  background: aqua;
+
 }
 
 /* Descendent Selector:
@@ -55,4 +51,90 @@ figcaption {
 
 #details a:active {
   color: red;
+}
+
+/* //////// MEDIA //////// */
+
+/* media will not take up more than 100% of its container */
+img, video, audio {
+  max-width: 100%;
+}
+
+/* //////// LAYOUT //////// */
+
+/* will include padding + border as part of width to fix section padding issues. padding will no longer affect width of elements*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+
+/* each column will have 2% margin out of 100% */
+.column-1 {
+  float: left;
+  width: 32%;
+  background: #ccc;
+}
+
+.column-2 {
+  float: left;
+  width: 66%;
+  background: #ccc;
+}
+
+.column-3 {
+  background: #ccc;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+}
+
+/* attribute selector: any element that has a class="column-" anywhere inside of it */
+[class*="column-"] {
+  margin-left: 2%;
+}
+
+/* we do not want 2% margin to any first column on the left*/
+.first {
+  margin-left: 0%;
+}
+
+/* //////// SECTIONS //////// */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 1;
+}
+section {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* //////// SOCIAL //////// */
+#social {
+  position: fixed;
+  top: 200px;
+  right: 20px;
+  width: 40px;
+  z-index: 1;
+}
+
+#social a {
+  display: block;
+  with: 40px;
+  height: 40px;
+  background: yellow;
 }
