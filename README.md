@@ -1,5 +1,3 @@
-Exceptional Realty Group Website
----
+# Exceptional Realty Group Website
 
-# Description
-This project is an example site for Flatiron School's Front-end Web Development Course.
+The Exceptional Realty Group Website is an example site composed of HTML and CSS. 
